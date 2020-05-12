@@ -30,7 +30,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:layout_toRightOf="@+id/imageview_profile"
                 android:text="@string/full_name"
                 android:textColor="#000"
@@ -72,8 +72,8 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/ic_stream" />
 
@@ -87,7 +87,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/stremName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                         android:layout_centerHorizontal="true"
                         android:text="@string/streamname"
                         android:textColor="#000000"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:textStyle="bold|italic" />
 
 
@@ -117,8 +117,8 @@
                     android:padding="5dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerHorizontal="true"
                         android:src="@drawable/ic_year" />
 
@@ -132,7 +132,7 @@
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/currentYear"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
                         android:layout_centerHorizontal="true"
                         android:text="@string/ex_year"
                         android:textColor="#000000"
-                        android:textSize="20sp"
+                        android:textSize="15sp"
                         android:textStyle="bold|italic" />
 
 
