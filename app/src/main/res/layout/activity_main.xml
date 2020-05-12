@@ -1,233 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/ic_profilebackground">
+    android:orientation="vertical"
+    android:background="@drawable/ic_profile_background">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageview_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_profileimage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
-
-    <EditText
-        android:id="@+id/NameOfUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/full_name"
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:layout_below="@+id/imageview_profile"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/User_Designation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/computer_science_engineering"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:layout_below="@+id/NameOfUser"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/ProfileB"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:src="@drawable/ic_profileborder"
-        android:layout_below="@id/User_Designation" />
+        android:layout_height="200dp"
+        android:padding="20dp"
+        android:background="#48db70">
 
+         <de.hdodenhof.circleimageview.CircleImageView
+             android:id="@+id/imageview_profile"
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:src="@drawable/ic_profileimage" />
 
-    <LinearLayout
-        android:id="@+id/Layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/ProfileB"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:src="@drawable/ic_email"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
+        <EditText
+            android:id="@+id/NameOfUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="@string/email_id"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/imageview_profile"
+            android:text="@string/full_name"
             android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="normal|bold|italic" />
+            android:textSize="20sp"
+            android:textStyle="bold|italic" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/User_Designation"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#535c68"
-            android:textStyle="bold"
-            android:inputType="textEmailAddress"
-            android:layout_marginLeft="10dp" />
+            android:layout_below="@+id/NameOfUser"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imageview_profile"
+            android:text="@string/user_name"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginTop="-100dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#48db70"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_stream"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/stream"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/stream"
+                    android:textColor="#808e9b"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/stremName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stream"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/streamname"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="125dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#48db70"
+            app:cardElevation="10dp"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_year"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/year"
+                    android:textColor="#808e9b"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/currentYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/year"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/ex_year"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
 
-
     <LinearLayout
-        android:id="@+id/Layout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/Layout1"
-        android:layout_marginTop="5dp">
+        android:orientation="vertical"
+        android:padding="20dp">
 
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:src="@drawable/ic_phone"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/contact"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="normal|bold|italic" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#535c68"
-            android:textStyle="bold"
-            android:inputType="number"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginBottom="5dp"
+            android:hint="@string/email_id"
+            app:hintTextColor="#7f8c8d">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="15dp"
+                android:text="@string/fetch_from_database"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/contact"
+            app:hintTextColor="#7f8c8d">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_contact"
+                android:drawablePadding="15dp"
+                android:text="@string/fetch_from_database"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/university_roll"
+            app:hintTextColor="#7f8c8d">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_roll"
+                android:drawablePadding="15dp"
+                android:text="@string/fetch_from_database"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/password"
+            app:hintTextColor="#7f8c8d">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="15dp"
+                android:text="@string/fetch_from_database"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/date_of_birth"
+            app:hintTextColor="#7f8c8d">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_dob"
+                android:drawablePadding="15dp"
+                android:text="@string/fetch_from_database"
+                android:textSize="15sp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/Update_button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#ff9f1a"
+            android:elevation="20dp"
+            android:text="@string/update"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:id="@+id/Layout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/Layout2"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:src="@drawable/ic_univ_roll"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/universityroll"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="normal|bold|italic" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#535c68"
-            android:textStyle="bold"
-            android:inputType="number"
-            android:layout_marginLeft="10dp" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/Layout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/Layout3"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:src="@drawable/ic_skills"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/skills"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="normal|bold|italic" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#535c68"
-            android:textStyle="bold"
-            android:inputType="text"
-            android:layout_marginLeft="10dp" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/Layout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/Layout4"
-        android:layout_marginTop="5dp">
-
-        <ImageView
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:src="@drawable/ic_dob"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@string/dateofbirth"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="normal|bold|italic" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:textColor="#535c68"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:inputType="date" />
-
-
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>
